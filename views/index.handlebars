@@ -3,9 +3,9 @@
 <h2>Delete Da Burger!</h2>
 
 <ul>
-  {{#each burger}}
-    {{#unless deleted}}
-      {{> burgers/burgers-block delete=true}}
+  {{#each burgers}}
+    {{#unless devoured}}
+      <li>{{name}}</li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,8 +14,8 @@
 
 <ul>
   {{#each burgers}}
-    {{#if deleted}}
-      {{> burgers/burger-block sleep=false}}
+    {{#if devoured}}
+      <li>{{name}}</li>
     {{/if}}
   {{/each}}
 </ul>

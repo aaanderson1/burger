@@ -29,6 +29,3 @@ var burger = {
 };
 
 module.exports = burger;
-
-// burger.deleteOne("5");
-// burger.selectAll();
