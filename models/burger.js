@@ -9,14 +9,15 @@ var burger = {
 		});
 	},
 	// inserts one record into the burgers table
-	insertOne: function(burgerName, cb) {
-		orm.insertOne("burgers", "burger_name", burgerName, function(res) {
+	insertOne: function(burgerName, devoured, cb) {
+		orm.insertOne("burgers", ["burger_name", "devoured"], [burgerName, devoured], function(res) {
 			cb(res);
 		});
 	},
 	// updates a burger entry
 	updateOne: function(idNum, cb) {
-		orm.updateOne("burgers", "devoured", "1", "id", idNum, function(res) {
+        console.log(idNum);
+		orm.updateOne("burgers", {"devoured": "1"}, {"id": idNum}, function(res) {
 			cb(res);
 		});
 	},
