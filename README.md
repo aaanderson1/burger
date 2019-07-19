@@ -1,4 +1,4 @@
-#BurgerApp!
+#burger_app
 
 Custom design and order your own burgers online in real time. 
 Create, Add, and Delete as you wish.
